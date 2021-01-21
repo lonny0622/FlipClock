@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:myFlip="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <androidx.cardview.widget.CardView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp"
+
+            >
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.example.clock.FlipLayout
+                    android:id="@+id/bit_flip_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    myFlip:flipTextBackground="@color/DimGray"
+                    myFlip:flipTextColor="@color/white"
+
+                    myFlip:flipTextSize="200sp" />
+            <!-- 底部View上面的一条线 -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center"
+                    android:background="@color/black"
+                    />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp"
+            android:layout_marginLeft="10dp">
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <com.example.clock.FlipLayout
+
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/bit_flip_2"
+                myFlip:flipTextColor="@color/white"
+                myFlip:flipTextSize="200sp"
+                myFlip:flipTextBackground="@color/DimGray"
+                android:background="#ffffff"/>
+                <!-- 底部View上面的一条线 -->
+                <View
+                    android:id="@+id/last_price_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center"
+                    android:background="@color/black"
+                    />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp"
+            android:layout_marginLeft="10dp">
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <com.example.clock.FlipLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/bit_flip_3"
+                myFlip:flipTextColor="@color/white"
+                myFlip:flipTextSize="200sp"
+                myFlip:flipTextBackground="@color/DimGray"
+                android:background="#333"/>  />
+            <!-- 底部View上面的一条线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:background="@color/black"
+                />
+        </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+
+</LinearLayout>
