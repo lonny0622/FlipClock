@@ -84,21 +84,22 @@ public class MainActivity extends Activity implements View.OnClickListener, Flip
 
         int hour = nhour - ohour;
         int minute = nminute - ominute;
-        int ge = nsecond- osecond;
+        int second = nsecond- osecond;
 
-        if (hour >= 1) {
-            bit_hour.smoothFlip(hour, 24,TimeTAG.hour,false);
-            bit_minute.smoothFlip(minute, 60,TimeTAG.min,false);
+       
+        if (hour >= 1||hour==-23) {
+            bit_hour.smoothFlip(1, 24,TimeTAG.hour,false);
+
         }
 
-        if (minute >=1) {
-            bit_minute.smoothFlip(minute, 60,TimeTAG.min,false);
+        if (minute >=1||minute==-59) {
+            bit_minute.smoothFlip(1, 60,TimeTAG.min,false);
+
+        }
+
+        if (second >=1||second==-59) {
             bit_second.smoothFlip(1, 60,TimeTAG.sec,false);
-        }
-
-        if (ge >=1) {
-            bit_second.smoothFlip(ge, 60,TimeTAG.sec,false);
-        }
+        }//当下一秒变为0时减去上一秒是-59
 
 
 
